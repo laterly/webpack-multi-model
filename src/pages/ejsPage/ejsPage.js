@@ -1,0 +1,1 @@
+import './ejsPage.scss';
