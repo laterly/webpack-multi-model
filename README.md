@@ -23,6 +23,7 @@ npm run build
 
 ## 本地访问页面示例:
 - ejs模板:http://127.0.0.1:5500/ejsPage.html
+- pug模板:http://127.0.0.1:5500/pugPage.html
 - vue.js:http://127.0.0.1:5500/vuePage.html
 - react.js:http://127.0.0.1:5500/reactPage.html
 
