@@ -5,8 +5,8 @@
 ## 目前支持的语法
 - [1.ejs模板引擎!](https://ejs.bootcss.com/)
 - [2.pug模板引擎!](https://github.com/pugjs/pug/)
-- [2.vue.js!](https://cn.vuejs.org/)
-- [2.react.js!](https://reactjs.org/)
+- [3.vue.js!](https://cn.vuejs.org/)
+- [4.react.js!](https://reactjs.org/)
 ## Build Setup
 
 ``` bash
@@ -45,10 +45,16 @@ npm run build
 │    │  │      ejsPage.ejs
 │    │  │      ejsPage.js
 │    │  │
+│    │  ├─pugPage                  // pug page
+│    │  │      pugPage.scss
+│    │  │      pugPage.ejs
+│    │  │      pugPage.js
+│    │  │
 │    │  ├─reactPage                // react page
 │    │  │      App.jsx
+│    │  │      App.scss
 │    │  │      reactPage.scss
-│    │  │      reactPage.js
+│    │  │      reactPage.html
 │    │  │      reactPage.js
 │    │  │
 │    │  └─vuePage                  // vue page
