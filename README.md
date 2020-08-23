@@ -4,7 +4,7 @@
 
 ## 目前支持的语法
 - [1.ejs模板引擎!](https://ejs.bootcss.com/)
-- [2.pug模板引擎!]()https://github.com/pugjs/pug/)
+- [2.pug模板引擎!](https://github.com/pugjs/pug/)
 - [2.vue.js!](https://cn.vuejs.org/)
 - [2.react.js!](https://reactjs.org/)
 ## Build Setup
