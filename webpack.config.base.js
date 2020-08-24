@@ -16,7 +16,7 @@ module.exports = {
     entry: mulitHtmlWebpackPlugins.entry,
     output: {
         path: resolve(__dirname, config.assetsRoot),
-        filename: config.isHash ? `${config.assetsSubDirectory}/js/[name].[contenthash:${config.hasNumber}].js` : `${config.assetsSubDirectory}/js/[name].js`,
+        filename: config.isHash ? `${config.assetsSubDirectory}/js/[name].[contenthash:${config.hashNumber}].js` : `${config.assetsSubDirectory}/js/[name].js`,
         publicPath: config.build.publicPath
     },
     resolve: {
@@ -65,6 +65,7 @@ module.exports = {
                             {
                                 loader: 'babel-loader',
                                 options: {
+                                    cacheDirectory: true,
                                     presets: ['@babel/preset-env', '@babel/preset-react'],
                                     plugins: ['@babel/plugin-transform-runtime']
                                 }
@@ -94,6 +95,15 @@ module.exports = {
                         use: ['html-loader', 'pug-html-loader']
                     },
                     {
+                        test: /\.mustache$/,
+                        loader: "mustache-loader",
+                        exclude: /node_modules/,
+                        include: resolve(__dirname, 'src'),
+                        options: {
+                            tiny: true
+                        }
+                    },
+                    {
                         test: /\.html$/,
                         loader: 'html-loader',
                         exclude: /node_modules/,
@@ -109,7 +119,7 @@ module.exports = {
                         include: resolve(__dirname, 'src'),
                         options: {
                             limit: 8 * 1024,
-                            name: config.isHash ? `[name].[contenthash:${config.hasNumber}].[ext]` : '[name].[ext]',
+                            name: config.isHash ? `[name].[contenthash:${config.hashNumber}].[ext]` : '[name].[ext]',
                             outputPath: `${config.assetsSubDirectory}/images`,
                             esModule: false
                         }
@@ -121,7 +131,7 @@ module.exports = {
                         include: resolve(__dirname, 'src'),
                         options: {
                             limit: 8 * 1024,
-                            name: config.isHash ? `[name].[contenthash:${config.hasNumber}].[ext]` : '[name].[ext]',
+                            name: config.isHash ? `[name].[contenthash:${config.hashNumber}].[ext]` : '[name].[ext]',
                             outputPath: `${config.assetsSubDirectory}/media`,
                             esModule: false
                         }
@@ -133,7 +143,7 @@ module.exports = {
                         include: resolve(__dirname, 'src'),
                         options: {
                             limit: 8 * 1024,
-                            name: config.isHash ? `[name].[contenthash:${config.hasNumber}].[ext]` : '[name].[ext]',
+                            name: config.isHash ? `[name].[contenthash:${config.hashNumber}].[ext]` : '[name].[ext]',
                             outputPath: `${config.assetsSubDirectory}/fonts`,
                             esModule: false
                         }
@@ -151,7 +161,7 @@ module.exports = {
     plugins: [
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
-            filename: config.isHash ? `${config.assetsSubDirectory}/css/[name].[contenthash:${config.hasNumber}].css` : `${config.assetsSubDirectory}/css/[name].css`
+            filename: config.isHash ? `${config.assetsSubDirectory}/css/[name].[contenthash:${config.hashNumber}].css` : `${config.assetsSubDirectory}/css/[name].css`
         }),
         ...mulitHtmlWebpackPlugins.plugins
     ]

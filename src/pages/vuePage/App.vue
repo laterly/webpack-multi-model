@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-content">
     <img alt="Vue logo" src="../../images/vue.png" />
     <HelloWorld msg="Hello Vue"></HelloWorld>
   </div>
