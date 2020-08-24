@@ -5,8 +5,9 @@
 ## 目前支持的语法
 - [1.ejs模板引擎!](https://ejs.bootcss.com/)
 - [2.pug模板引擎!](https://github.com/pugjs/pug/)
-- [3.vue.js!](https://cn.vuejs.org/)
-- [4.react.js!](https://reactjs.org/)
+- [3.handlebars模板引擎!](https://github.com/handlebars-lang/handlebars.js)
+- [4.vue.js!](https://cn.vuejs.org/)
+- [5.react.js!](https://reactjs.org/)
 ## Build Setup
 
 ``` bash
@@ -24,6 +25,7 @@ npm run build
 ## 本地访问页面示例:
 - ejs模板:http://127.0.0.1:5500/ejsPage.html
 - pug模板:http://127.0.0.1:5500/pugPage.html
+- handlebars模板:http://127.0.0.1:5500/hbsPage.html
 - vue.js:http://127.0.0.1:5500/vuePage.html
 - react.js:http://127.0.0.1:5500/reactPage.html
 
@@ -49,6 +51,11 @@ npm run build
 │    │  │      pugPage.scss
 │    │  │      pugPage.ejs
 │    │  │      pugPage.js
+│    │  │
+│    │  ├─hbsPage                  // handlebars page
+│    │  │      hbsPage.scss
+│    │  │      hbsPage.hbs
+│    │  │      hbsPage.js
 │    │  │
 │    │  ├─reactPage                // react page
 │    │  │      App.jsx

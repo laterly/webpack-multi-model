@@ -29,7 +29,7 @@ module.exports = {
             utils: resolve(__dirname, "src/utils"),
             components: resolve(__dirname, "src/components")
         },
-        extensions: ['.js', '.json', '.vue', '.scss', '.css', 'ejs', 'jsx'],
+        extensions: ['.js', '.json', '.vue', '.scss', '.css', 'ejs', 'jsx','hbs','pug'],
     },
     module: {
         rules: [
@@ -95,13 +95,10 @@ module.exports = {
                         use: ['html-loader', 'pug-html-loader']
                     },
                     {
-                        test: /\.mustache$/,
-                        loader: "mustache-loader",
+                        test: /\.hbs$/,
+                        loader: "handlebars-loader",
                         exclude: /node_modules/,
-                        include: resolve(__dirname, 'src'),
-                        options: {
-                            tiny: true
-                        }
+                        include: resolve(__dirname, 'src')
                     },
                     {
                         test: /\.html$/,

@@ -20,6 +20,11 @@ module.exports = [
       entry: 'pugPage/pugPage.js'
     },
     {
+      name: 'hbsPage',
+      template: 'hbsPage/hbsPage.hbs',
+      entry: 'hbsPage/hbsPage.js'
+    },
+    {
       name: 'vuePage',
       template: 'vuePage/vuePage.html',
       entry: 'vuePage/vuePage.js'
