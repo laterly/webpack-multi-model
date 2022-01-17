@@ -1,26 +1,15 @@
-const webpackConfigBase = require('./webpack.config.base');
-
-const { resolve } = require('path')
-
-const { merge } = require('webpack-merge');
-
+const webpackConfigBase = require("./webpack.config.base");
+const { merge } = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-
-const config = require('./config');
-
+const config = require("./config");
 const webapckConfigDev = {
-    mode: 'production',
-    devtool: config.build.sourceMap ? 'source-map' : false,
-    optimization:{
-        splitChunks:{
-            chunks:'all'
-        }
+  mode: "production",
+  devtool: config.build.sourceMap ? "source-map" : false,
+  optimization: {
+    splitChunks: {
+      chunks: "all",
     },
-    plugins: [
-        new CleanWebpackPlugin(),
-    ]
-}
-
-module.exports = merge(webpackConfigBase, webapckConfigDev)
-
-
+  },
+  plugins: [new CleanWebpackPlugin()],
+};
+module.exports = merge(webpackConfigBase, webapckConfigDev);
